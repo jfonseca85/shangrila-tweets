@@ -48,13 +48,13 @@ public class SparkConsumerService {
         JavaStreamingContext jssc = new JavaStreamingContext(sparkConf, Durations.seconds(10));
 
         // Create direct kafka stream with brokers and topics
-        JavaInputDStream<ConsumerRecord<Object, Object>> messages = KafkaUtils.createDirectStream(
+        JavaInputDStream<ConsumerRecord<String, String>> messages = KafkaUtils.createDirectStream(
                 jssc,
                 LocationStrategies.PreferConsistent(),
                 ConsumerStrategies.Subscribe(topics, kafkaConsumerConfig.consumerConfigs()));
 
         // Get the lines, split them into words, count the words and print
-        JavaDStream<String> lines = messages.map(stringStringConsumerRecord -> (String) stringStringConsumerRecord.value());
+        JavaDStream<String> lines = messages.map(stringStringConsumerRecord -> stringStringConsumerRecord.value());
         //Count the tweets and print
         lines.count()
              .map(cnt -> "Popular hash tags in last 60 seconds (" + cnt + " total tweets):")

@@ -22,6 +22,7 @@ public class ProducerApplication implements CommandLineRunner {
         SpringApplication.run(ProducerApplication.class, args);
     }
 
+    @Override
     public void run(String... strings) throws Exception {
         logger.info("Running Twitter Streaming ...");
         twitterStreamingService.stream();

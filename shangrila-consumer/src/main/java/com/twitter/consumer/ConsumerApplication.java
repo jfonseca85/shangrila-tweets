@@ -17,6 +17,7 @@ public class ConsumerApplication implements CommandLineRunner {
         SpringApplication.run(ConsumerApplication.class, args);
     }
 
+    @Override
     public void run(String... args) throws Exception {
         sparkConsumerService.run();
     }
