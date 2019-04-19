@@ -17,6 +17,26 @@ public class HashTagsUtils {
 		return hashTags.iterator();
 	}
 
+	public static Iterator<String> anyashTagsFromTweet(String text) {
+		List<String> hashTags = new ArrayList<>();
+		try {
+			Matcher matcher = HASHTAG_PATTERN.matcher(text);
+			String handle = matcher.group();
+			while (matcher.find()) {
+				for (HashTagAmostras hasTag : HashTagAmostras.values()) {
+					if (hasTag.getHashTag().equalsIgnoreCase(handle)) {
+						// TODO: Melhorar o Builder do TweetsPlayLoad
+						hashTags.add("QTD_TWEETS");
+					}
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("ERROR >>>> : {}" + text.toString());
+		}
+		return hashTags.iterator();
+	}
+
 	public static Iterator<String> hashTagsFromTweetAmostras(String text) {
 		List<String> hashTags = new ArrayList<>();
 		Matcher matcher = HASHTAG_PATTERN.matcher(text);
@@ -24,23 +44,23 @@ public class HashTagsUtils {
 			String handle = matcher.group();
 			for (HashTagAmostras hasTag : HashTagAmostras.values()) {
 				if (hasTag.getHashTag().equalsIgnoreCase(handle)) {
-					//TODO: Melhorar o Builder do TweetsPlayLoad
+					// TODO: Melhorar o Builder do TweetsPlayLoad
 					hashTags.add(text.replace("#", ""));
 				}
 			}
 		}
 		return hashTags.iterator();
 	}
-	
+
 	public static Iterator<String> hashTagsByUserAndLanguage(String text) {
 		List<String> hashTags = new ArrayList<>();
 		Matcher matcher = HASHTAG_PATTERN.matcher(text);
-		
+
 		while (matcher.find()) {
 			String handle = matcher.group();
 			for (HashTagAmostras hasTag : HashTagAmostras.values()) {
 				if (hasTag.getHashTag().equalsIgnoreCase(handle)) {
-					//TODO: Melhorar o Builder do TweetsPlayLoad		
+					// TODO: Melhorar o Builder do TweetsPlayLoad
 					TweetPlayload playload = TweetPlayload.builder(text.replace("#", ""));
 					hashTags.add(playload.hashTagByUserAndLanguage());
 				}
