@@ -1,11 +1,7 @@
 package com.twitter.consumer.model;
 
-import java.io.IOException;
-
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 public class TweetPlayload {
 	
@@ -58,6 +54,12 @@ public class TweetPlayload {
 	public void setIdioma(String idioma) {
 		this.idioma = idioma;
 	}
+	
+	
+	public String hashTagByUserAndLanguage() {
+		return "TweetPlayload [name=" + name + ", mensagem=" + mensagem + ", idioma=" + idioma + "]";
+	}
+	
 	
 	public static TweetPlayload builder (String tweetPlayload) {
 	    ObjectMapper mapper = new ObjectMapper();

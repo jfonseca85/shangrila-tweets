@@ -73,7 +73,7 @@ public class SparkConsumerService {
 	    lines
 	    	 .flatMap(text -> HashTagsUtils.hashTagsFromTweetAmostras(text))
 	         .foreachRDD(rrdd -> {
-	             log.info("<<<<<<<<<<<<< Salvando do playLoad no Banco >>>>>>>>>>>>>>>>>>>>>");
+	             log.info("<<<<<<<<<<<<< INICIO - Salvando do playLoad no Banco >>>>>>>>>>>>>>>>>>>>>");
 	             //Counts
 	             rrdd.collect()
 	                     .forEach(record -> {
@@ -82,22 +82,39 @@ public class SparkConsumerService {
 	                    	 log.info("Salvando do playLoad no Banco >>>> : {} ", tweetPlayload.toString());
 	             });
 	         });
-        
+	    log.info("<<<<<<<<<<<<< FIM - Salvando do playLoad no Banco >>>>>>>>>>>>>>>>>>>>>");
 	    
-        //Agrupando pelo usuario: <<<<<<<:>>>>>>>>>
-        tweetRDD.flatMap(text -> HashTagsUtils.hashTagsFromTweet(text))
+	    
+        //Coleta de seguidores por Usuarios para as amostras
+	    lines
+	    	 .flatMap(hashTagsByUserAndLanguage -> HashTagsUtils.hashTagsByUserAndLanguage(hashTagsByUserAndLanguage)) // Listar os Tweets por usuario 
              .mapToPair(hashTag -> new Tuple2<>(hashTag, 1))
              .reduceByKey((a, b) -> Integer.sum(a, b))
              .mapToPair(stringIntegerTuple2 -> stringIntegerTuple2.swap())
                 .foreachRDD(rrdd -> {
-                    log.info("---------------------------------------------------------------");
+                	 log.info("<<<<<<<<<<<<< INICIO - Salvando do playLoad Tweets por Usuario, hashTag and Idioma >>>>>>>>>>>>>>>>>>>>>");
                     //Counts
                     rrdd.sortByKey(false).collect()
                             .forEach(record -> {
                                 log.info("Agrupando pelo usuario: <<<<<<<:>>>>>>>>> "+String.format(" %s (%d)", record._2, record._1));
                     });
                 });
-                
+	    log.info("<<<<<<<<<<<<< INICIO - Salvando do playLoad Tweets por Usuario, hashTag and Idioma >>>>>>>>>>>>>>>>>>>>>");
+	    
+//        //Agrupando pelo usuario: <<<<<<<:>>>>>>>>>
+//        tweetRDD.flatMap(text -> HashTagsUtils.hashTagsFromTweet(text))
+//             .mapToPair(hashTag -> new Tuple2<>(hashTag, 1))
+//             .reduceByKey((a, b) -> Integer.sum(a, b))
+//             .mapToPair(stringIntegerTuple2 -> stringIntegerTuple2.swap())
+//                .foreachRDD(rrdd -> {
+//                    log.info("---------------------------------------------------------------");
+//                    //Counts
+//                    rrdd.sortByKey(false).collect()
+//                            .forEach(record -> {
+//                                log.info("Agrupando pelo usuario: <<<<<<<:>>>>>>>>> "+String.format(" %s (%d)", record._2, record._1));
+//                    });
+//                });
+//                
         // Get the lines, split them into words, count the words and print
 //        JavaDStream<String> lines = messages.map(stringStringConsumerRecord -> stringStringConsumerRecord.value());
         
