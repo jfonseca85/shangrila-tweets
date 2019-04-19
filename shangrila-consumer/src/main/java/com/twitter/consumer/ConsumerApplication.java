@@ -4,6 +4,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.twitter.consumer.service.SparkConsumerService;
+
 @SpringBootApplication
 public class ConsumerApplication implements CommandLineRunner {
 
