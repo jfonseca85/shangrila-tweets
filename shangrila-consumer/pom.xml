@@ -92,6 +92,18 @@
 			<artifactId>jackson-module-afterburner</artifactId>
 		</dependency>
 
+		<!--Spark Cassandra Connector -->
+		<dependency>
+			<groupId>com.datastax.spark</groupId>
+			<artifactId>spark-cassandra-connector_2.10</artifactId>
+			<version>1.0.0-rc4</version>
+		</dependency>
+		<dependency>
+			<groupId>com.datastax.spark</groupId>
+			<artifactId>spark-cassandra-connector-java_2.10</artifactId>
+			<version>1.0.0-rc4</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
