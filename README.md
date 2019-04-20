@@ -83,7 +83,7 @@ Agora inicie o shell do Windows; você pode receber alguns avisos, que você pod
 ```
 
 
-##Esta documentação esta em desenvolvimento
+## Esta documentação esta em desenvolvimento
 
 ## Referências
 * [Instalação do Apache Spark Windows](https://dzone.com/articles/working-on-apache-spark-on-windows)
