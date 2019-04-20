@@ -6,7 +6,7 @@ Um projeto de demonstração usando Spark Streaming para analisar hashtags popul
 Os dados vêm da fonte da Twitter Streaming API e são fornecidos ao Kafka.
 O consumidor com.twitter.producer.service recebe dados do Kafka e, em seguida, os processa em um fluxo usando o Spark Streaming.
 
-# Desenho da Arquitura da Solução
+# Desenho da Arquitetura da Solução
 
 
 
