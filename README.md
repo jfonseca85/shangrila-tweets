@@ -6,9 +6,18 @@ Um projeto de demonstração usando Spark Streaming para analisar hashtags popul
 Os dados vêm da fonte da Twitter Streaming API e são fornecidos ao Kafka.
 O consumidor com.twitter.producer.service recebe dados do Kafka e, em seguida, os processa em um fluxo usando o Spark Streaming.
 
+
+# Estrutura
+
+
+## É uma estrutura de um projeto muilt-módulos
+
+ 1)  shangrila-producer - Realiza a consulta a api do Twitter e funciona como produtor de topico no Kafka
+
+ 2)  shangrila-producer - Tem a responsabilidade de implementar as regras de negocio atraves do spark streaming e salvar no Banco de Dados (Cassandra). Também tem a responsabilidade de ser o consumidor dos topicos do Kafka.
+
+
 # Desenho da Arquitetura da Solução
-
-
 
 O desenho e implementação de uma arquitetura distribuída, que realize a integração com o Twitter que seja tolerante a falhas e escalável horizontalmente, que exponha através de uma aplicação web as informações sumarizadas e descritas no Case de integração.
 
