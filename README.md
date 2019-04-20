@@ -1,4 +1,4 @@
-# Twitter Streaming Analyze usando Java 8, Spark Streaming, Kafka
+# Twitter Streaming Analyze usando Java 8, Spark Streaming, Kafka e Cassandra
 
 
 
