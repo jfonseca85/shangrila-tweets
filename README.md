@@ -10,7 +10,7 @@ O consumidor com.twitter.producer.service recebe dados do Kafka e, em seguida, o
 # Estrutura
 
 
-## É uma estrutura de um projeto muilt-módulos
+## É uma estrutura de um projeto multi-módulos
 
  1)  shangrila-producer - Realiza a consulta a api do Twitter e funciona como produtor de topico no Kafka
 
