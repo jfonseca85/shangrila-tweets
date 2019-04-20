@@ -1,5 +1,5 @@
 ## Shangrila - MicroServices
-## Spring MicroServices
+
 
 Neste projeto foi utilizada a arquitetura baseada em microserviços.
 
