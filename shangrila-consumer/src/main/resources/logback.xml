@@ -11,9 +11,10 @@
     <logger name="com.twitter.consumer" level="info"/>
 
     <logger name="org.apache" level="OFF"/>
-    <logger name="org.apache.spark" level="OFF"/>
+    <logger name="org.apache.spark" level="WARN"/>
     <logger name="org.spark_project" level="OFF"/>
     <logger name="org.springframework" level="OFF"/>
+    
 
 <!--     <logger name="org.apache" level="info"/> -->
 <!--     <logger name="org.apache.spark" level="info"/> -->

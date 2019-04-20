@@ -1,5 +1,32 @@
 version: '3'
 services:
+  cassandra:
+    image: cassandra:3.0.12
+    ports:
+      - "9042:9042"
+      - "7000:7000"
+      - "7001:7001"
+      - "7199:7199"
+      - "9160:9160"
+    container_name: cassandra
+    environment:
+      - SERVICE_NAME=cassandra
+      - SERVICE_9042_NAME=cassandra
+      - SERVICE_7000_NAME=cassandra
+      - SERVICE_7001_NAME=cassandra
+      - SERVICE_7199_NAME=cassandra
+      - SERVICE_9160_NAME=cassandra
+      - CASSANDRA_CLUSTER_NAME=SHANGRILA C*
+      - CASSANDRA_DC=DC1
+      - CASSANDRA_RACK=RACK1
+      - CASSANDRA_ENDPOINT_SNITCH=GossipingPropertyFileSnitch
+      - CASSANDRA_LISTEN_ADDRESS
+      - CASSANDRA_BROADCAST_ADDRESS
+      - CASSANDRA_SEEDS
+      - CASSANDRA_RPC_ADDRESS=${DOCKER_IP}
+    restart: always
+    volumes:
+      - /data/cassandra:/var/lib/cassandra
   zookeeper:
     image: wurstmeister/zookeeper
     ports:
