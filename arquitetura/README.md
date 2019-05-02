@@ -1,5 +1,5 @@
-## Shangrila - Cotação de Moedas
-## Spring MicroServices
+## Shangrila - MicroServices
+
 
 Neste projeto foi utilizada a arquitetura baseada em microserviços.
 
