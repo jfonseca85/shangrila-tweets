@@ -14,8 +14,10 @@
 		<hibernate-validator.version>5.2.4.Final</hibernate-validator.version>
 		<spark.version>2.4.1</spark.version>
 	</properties>
-
+	
+	<groupId>tweet.streaming.shangila</groupId>
 	<artifactId>shangrila</artifactId>
+	<version>1.0.0</version>
 	<packaging>pom</packaging>
 
 	<!-- Modules -->

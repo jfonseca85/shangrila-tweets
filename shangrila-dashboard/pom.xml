@@ -2,10 +2,10 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>twitter.streaming.shangila</groupId>
+	<groupId>tweet.streaming.shangila</groupId>
 	<artifactId>shangrila-dashboard</artifactId>
 	<version>1.0.0</version>
-	<name>IoT Spring Boot Dashboard</name>
+	<name>shangrila-dashboard</name>
 
 	<!-- Import dependency management from Spring Boot -->
 	<parent>
