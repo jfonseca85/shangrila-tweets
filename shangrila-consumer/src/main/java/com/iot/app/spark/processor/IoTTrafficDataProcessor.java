@@ -34,7 +34,7 @@ import scala.Tuple3;
 /**
  * Class to process IoT data stream and to produce traffic data details.
  * 
- * @author abaghel
+ * @author jfonseca
  *
  */
 public class IoTTrafficDataProcessor {

@@ -4,7 +4,6 @@ import org.springframework.data.cassandra.repository.CassandraRepository;
 import org.springframework.data.cassandra.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.iot.app.springboot.dao.entity.WindowTrafficData;
 import com.iot.app.springboot.dao.entity.WindowTweetTrafficData;
 
 /**

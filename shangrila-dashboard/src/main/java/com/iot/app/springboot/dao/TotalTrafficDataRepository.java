@@ -9,7 +9,7 @@ import com.iot.app.springboot.dao.entity.TotalTrafficData;
 /**
  * DAO class for total_traffic 
  * 
- * @author abaghel
+ * @author jfonseca
  *
  */
 @Repository

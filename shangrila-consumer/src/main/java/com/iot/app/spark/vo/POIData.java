@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Class to represent attributes of POI
  * 
- * @author abaghel
+ * @author jfonseca
  *
  */
 public class POIData implements Serializable {

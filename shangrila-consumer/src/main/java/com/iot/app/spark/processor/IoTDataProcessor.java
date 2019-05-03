@@ -33,7 +33,7 @@ import scala.Tuple3;
 /**
  * This class consumes Kafka IoT messages and creates stream for processing the IoT data.
  * 
- * @author abaghel
+ * @author jfonseca
  *
  */
 public class IoTDataProcessor {

@@ -2,12 +2,13 @@ package com.iot.app.spark.vo;
 
 import java.io.Serializable;
 import java.util.Date;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 /**
  * Class to represent the IoT vehicle data.
  * 
- * @author abaghel
+ * @author jfonseca
  *
  */
 public class IoTData implements Serializable{

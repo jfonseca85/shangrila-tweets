@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Key class for calculation
  * 
- * @author abaghel
+ * @author jfonseca
  *
  */
 public class AggregateKey implements Serializable {

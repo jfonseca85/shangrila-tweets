@@ -10,7 +10,7 @@ import com.iot.app.springboot.dao.entity.POITrafficData;
 /**
  * DAO class for poi_traffic 
  * 
- * @author abaghel
+ * @author jfonseca
  *
  */
 @Repository

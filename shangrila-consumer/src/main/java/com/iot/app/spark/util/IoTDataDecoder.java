@@ -9,7 +9,7 @@ import kafka.utils.VerifiableProperties;
 /**
  * Class to deserialize JSON string to IoTData java object
  * 
- * @author abaghel
+ * @author jfonseca
  *
  */
 public class IoTDataDecoder implements Decoder<IoTData> {

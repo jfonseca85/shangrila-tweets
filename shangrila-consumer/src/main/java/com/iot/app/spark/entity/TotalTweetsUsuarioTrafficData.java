@@ -2,6 +2,7 @@ package com.iot.app.spark.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 /**

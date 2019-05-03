@@ -2,12 +2,13 @@ package com.iot.app.spark.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 /**
  * Class to represent poi_tarffic db table
  * 
- * @author abaghel
+ * @author jfonseca
  *
  */
 public class POITrafficData implements Serializable {

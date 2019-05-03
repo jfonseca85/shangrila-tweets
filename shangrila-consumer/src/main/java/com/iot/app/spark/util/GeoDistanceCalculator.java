@@ -5,12 +5,12 @@ package com.iot.app.spark.util;
  * This class uses "haversine" formula to calculate the great-circle distance between two points on earth.
  * http://www.movable-type.co.uk/scripts/latlong.html  
  * 
- * @author abaghel
+ * @author jfonseca
  *
  */
 public class GeoDistanceCalculator {
 	/**
-	 * Method to get shortest distance over the earth’s surface in Kilometer between two locations
+	 * Method to get shortest distance over the earthï¿½s surface in Kilometer between two locations
 	 * 
 	 * @param lat1 latitude of location A
 	 * @param lon1 longitude of location A

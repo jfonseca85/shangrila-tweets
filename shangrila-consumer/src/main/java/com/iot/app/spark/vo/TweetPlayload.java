@@ -2,9 +2,6 @@ package com.iot.app.spark.vo;
 
 import java.io.Serializable;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 public class TweetPlayload implements Serializable{
 	
 	private String name;

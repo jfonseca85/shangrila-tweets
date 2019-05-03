@@ -3,12 +3,13 @@ package com.iot.app.spark.util;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
+
 import org.apache.log4j.Logger;
 
 /**
  * Utility class to read property file
  * 
- * @author abaghel
+ * @author jfonseca
  *
  */
 public class PropertyFileReader {

@@ -8,7 +8,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 /**
  * Spring boot application class for Dashboard.
  * 
- * @author abaghel
+ * @author jfonseca
  *
  */
 @SpringBootApplication

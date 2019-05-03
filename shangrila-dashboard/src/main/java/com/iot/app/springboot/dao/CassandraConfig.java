@@ -11,7 +11,7 @@ import org.springframework.data.cassandra.repository.config.EnableCassandraRepos
 /**
  * Spring bean configuration for Cassandra db.
  * 
- * @author abaghel
+ * @author jfonseca
  *
  */
 @Configuration
