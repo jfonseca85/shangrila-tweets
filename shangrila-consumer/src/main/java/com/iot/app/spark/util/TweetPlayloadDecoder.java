@@ -1,7 +1,7 @@
 package com.iot.app.spark.util;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.iot.app.spark.vo.TweetPlayload;
+import com.tweet.app.spark.vo.TweetPlayload;
 
 import kafka.serializer.Decoder;
 import kafka.utils.VerifiableProperties;

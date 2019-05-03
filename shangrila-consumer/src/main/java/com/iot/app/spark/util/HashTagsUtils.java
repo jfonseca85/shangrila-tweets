@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.iot.app.spark.vo.HashTagAmostras;
-import com.iot.app.spark.vo.TweetPlayload;
+import com.tweet.app.spark.vo.HashTagAmostras;
+import com.tweet.app.spark.vo.TweetPlayload;
 
 public class HashTagsUtils {
 	private static final Pattern HASHTAG_PATTERN = Pattern.compile("#\\w+");
