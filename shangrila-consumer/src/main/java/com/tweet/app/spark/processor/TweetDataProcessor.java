@@ -89,9 +89,9 @@ public class TweetDataProcessor {
 
 		// process data
 		TweetTrafficDataProcessor trafficDataProcessor = new TweetTrafficDataProcessor();
-		trafficDataProcessor.processTotalTrafficData(filteredIotDataStream);
-		trafficDataProcessor.processWindowTrafficData(filteredIotDataStream);
-		trafficDataProcessor.processTotalFollowersTrafficData(filteredIotDataStream);
+		trafficDataProcessor.processTotalTrafficData(nonFilteredIotDataStream);
+		trafficDataProcessor.processWindowTrafficData(nonFilteredIotDataStream);
+		trafficDataProcessor.processTotalFollowersTrafficData(nonFilteredIotDataStream);
 
 		// start context
 		jssc.start();
