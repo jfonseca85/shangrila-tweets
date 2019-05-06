@@ -94,6 +94,58 @@ Verifique se o Cassandra, ZooKeeper e o Kafka estão em execução (no prompt de
 ~> mvn spring-boot:run
 ```
 
+## Criação das tabelas no Casssandra
+
+Primeiro precisamos criar o Keyspace
+
+```
+//Create keyspace
+CREATE KEYSPACE IF NOT EXISTS TrafficKeySpace
+WITH replication = {
+	'class' : 'SimpleStrategy',
+	'replication_factor' : 1
+};
+```
+
+Criação das tabelas
+
+```
+//Create table
+CREATE TABLE TrafficKeySpace.tweet_playload (
+	name text,
+	mensagem text,
+	seguidores bigint,
+	datatweet timestamp,
+	idioma text,
+	PRIMARY KEY (name)
+);
+
+CREATE TABLE TrafficKeySpace.Window_Tweet_Traffic (
+	routeId text,
+	totalCount bigint,
+	timeStamp timestamp,
+	recordDate text,
+	PRIMARY KEY (routeId, recordDate)
+);
+
+CREATE TABLE TrafficKeySpace.TweetsUsuario_Trafic (
+	name text,
+	mensagem text,
+	idioma text,
+	totalCount bigint,
+	timeStamp timestamp,
+	recordDate text,
+	PRIMARY KEY (name, mensagem, idioma, recordDate)
+);
+
+CREATE TABLE TrafficKeySpace.TweetsFollwers_Trafic (
+	name text,
+	totalCount bigint,
+	timeStamp timestamp,
+	recordDate text,
+	PRIMARY KEY (name, recordDate)
+);
+```
 
 ## Esta documentação esta em desenvolvimento
 
