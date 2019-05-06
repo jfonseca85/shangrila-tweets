@@ -10,7 +10,7 @@ import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
  * Web-Socket message broker configuration class to send data using SockJS 
  * to dashboard html page.
  * 
- * @author abaghel
+ * @author jfonseca
  *
  */
 @Configuration

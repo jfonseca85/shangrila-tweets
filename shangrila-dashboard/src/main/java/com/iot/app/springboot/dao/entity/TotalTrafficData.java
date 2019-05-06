@@ -13,7 +13,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 /**
  * Entity class for total_traffic db table
  * 
- * @author abaghel
+ * @author jfonseca
  *
  */
 @Table("total_traffic")
