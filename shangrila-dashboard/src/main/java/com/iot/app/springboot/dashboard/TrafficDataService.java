@@ -30,7 +30,7 @@ import com.iot.app.springboot.vo.Response;
  * Service class to send traffic data messages to dashboard ui at fixed interval
  * using web-socket.
  * 
- * @author abaghel
+ * @author jfonseca
  *
  */
 @Service

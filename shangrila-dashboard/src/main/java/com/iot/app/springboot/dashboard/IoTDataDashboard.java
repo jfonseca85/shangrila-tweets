@@ -12,7 +12,7 @@ import brave.sampler.Sampler;
 /**
  * Spring boot application class for Dashboard.
  * 
- * @author abaghel
+ * @author jfonseca
  *
  */
 @SpringBootApplication

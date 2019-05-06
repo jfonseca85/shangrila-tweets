@@ -55,7 +55,7 @@ Neste quie rápido mostrarei como configurar sua máquina para executar nosso ap
 * Instalando o binário winutils
 
 
-1. Faça o download do winutils.exe do Hadoop 2.7   e coloque-o em um diretório C: \ Installations \ Hadoop \ bin
+1. Faça o download do winutils.exe do Hadoop 2.7 e coloque-o em um diretório C: \ Installations \ Hadoop \ bin
 
 2. Agora defina variáveis de ambiente HADOOP_HOME = C: \ Installations \ Hadoop.
 
@@ -66,26 +66,29 @@ Agora inicie o shell do Windows; você pode receber alguns avisos, que você pod
 ![Alt text](images/spark_install_sucess.png)
 
 
-
-
  
-3. Mude a configuração do Twtter no arquivo `\producer\src\main\resources\application.yml`colocando suas credencias do Twtter, client Id e Secret Id.
+1. Mude a configuração do Twtter no arquivo `\producer\src\main\resources\application.yml`colocando suas credencias do Twtter, client Id e Secret Id.
 
-3. Execute a imagem kafka usando o docker-compose (lembre-se de que a imagem kafka também precisa extrair o zookeper):: 
+2. Execute a imagem kafka usando o docker-compose (lembre-se de que a imagem kafka também precisa extrair o zookeper):
+
 
 ```
 ~>  docker-compose -f shangrila-producer/src/main/docker/kafka-docker-compose.yml up -d   
 ```
+Execute a imagem do Cassandra usando o docker-compose.
 
+```
+~>  docker-compose -f shangrila-consumer\src\main\docker\cassandra.yml up -d   
+```
 
-3. Verifique se o ZooKeeper e o Kafka estão em execução (no prompt de comando)
+Verifique se o Cassandra, ZooKeeper e o Kafka estão em execução (no prompt de comando)
 
 
 ```
 ~> docker ps 
 ```
 
-4. Execute o poducer e o aplicativo do consumidor com:
+6. Execute o poducer e o aplicativo do consumidor com:
 
 ```
 ~> mvn spring-boot:run

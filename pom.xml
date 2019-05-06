@@ -2,7 +2,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -12,9 +12,9 @@
 		<spring.social.twitter.version>1.5.12.RELEASE</spring.social.twitter.version>
 		<spring-kafka.version>2.1.7.RELEASE</spring-kafka.version>
 		<hibernate-validator.version>5.2.4.Final</hibernate-validator.version>
-		<spark.version>2.4.1</spark.version>
+
 	</properties>
-	
+
 	<groupId>tweet.streaming.shangila</groupId>
 	<artifactId>shangrila</artifactId>
 	<version>1.0.0</version>
@@ -26,5 +26,6 @@
 		<module>shangrila-consumer</module>
 		<module>shangrila-dashboard</module>
 	</modules>
-	<!-- Here's the Build pipeline, Configuring it later under modules(shangrila-producer, shangrila-consumer, shangrila-dashboard) -->
+	<!-- Here's the Build pipeline, Configuring it later under modules(shangrila-producer, 
+		shangrila-consumer, shangrila-dashboard) -->
 </project>

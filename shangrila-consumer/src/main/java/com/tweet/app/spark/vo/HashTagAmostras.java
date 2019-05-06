@@ -9,16 +9,16 @@ package com.tweet.app.spark.vo;
  */
 public enum HashTagAmostras {
 	
-	OPENBANKING("#openbanking"),
-	APIFIRST ("#apifirst"),
-	DEVOPS ("#devops"),
-	CLOUDFIRST ("#cloudfirst"),
-	MICROSERVICES ("#microservices"), 
-	APIGATEWAY ("#apigateway"),
-	OAUTH("#oauth"),
-	SWAGGER("#swagger"),
-	RAML("#raml"),
-	OPENAPIS("#openapis");
+//	OPENBANKING("#openbanking"),
+//	APIFIRST ("#apifirst"),
+//	DEVOPS ("#devops"),
+//	CLOUDFIRST ("#cloudfirst"),
+//	MICROSERVICES ("#microservices"), 
+//	APIGATEWAY ("#apigateway"),
+//	OAUTH("#oauth"),
+//	SWAGGER("#swagger"),
+//	RAML("#raml"),
+	OPENAPIS("#fantastico");
 	
 	private final String hashTag;
 	
