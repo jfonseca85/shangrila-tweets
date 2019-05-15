@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 /**
  * Entity class for poi_traffic db table
  * 
- * @author abaghel
+ * @author jfonseca
  *
  */
 @org.springframework.data.cassandra.core.mapping.Table("poi_traffic")

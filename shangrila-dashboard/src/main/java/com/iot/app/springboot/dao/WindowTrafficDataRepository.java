@@ -9,7 +9,7 @@ import com.iot.app.springboot.dao.entity.WindowTrafficData;
 /**
  * DAO class for window_traffic 
  * 
- * @author abaghel
+ * @author jfonseca
  *
  */
 @Repository
