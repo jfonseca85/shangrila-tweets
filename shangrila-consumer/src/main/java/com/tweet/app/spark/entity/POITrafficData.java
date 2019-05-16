@@ -13,6 +13,10 @@ import com.fasterxml.jackson.annotation.JsonFormat;
  */
 public class POITrafficData implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3690986451808404206L;
 	private String vehicleId;
 	private double distance;
 	private String vehicleType;

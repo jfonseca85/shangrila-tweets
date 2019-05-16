@@ -16,6 +16,10 @@ import com.fasterxml.jackson.annotation.JsonFormat;
  */
 @org.springframework.data.cassandra.core.mapping.Table("poi_traffic")
 public class POITrafficData implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone="MST")
 	@org.springframework.data.cassandra.core.mapping.PrimaryKeyColumn(name = "timeStamp",ordinal = 0,type = PrimaryKeyType.PARTITIONED)
 	private Date timeStamp;

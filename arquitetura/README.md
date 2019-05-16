@@ -3,6 +3,8 @@
 
 Neste projeto foi utilizada a arquitetura baseada em microserviços.
 
+![Alt text](images/arquitetura_microservices.png)
+
 Introdução
 O desenvolvimento de serviços Web RESTful foi feito uma combinação de Spring Boot, Spring Web MVC, Spring Web Services e JPA torna ainda mais empolgante trabalhar com essas ferramentas. E é ainda mais criar microsserviços.
 

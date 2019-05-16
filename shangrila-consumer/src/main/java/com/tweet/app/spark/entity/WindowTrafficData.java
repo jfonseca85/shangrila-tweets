@@ -13,6 +13,10 @@ import com.fasterxml.jackson.annotation.JsonFormat;
  */
 public class WindowTrafficData implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String routeId;
 	private String vehicleType;
 	private long totalCount;
