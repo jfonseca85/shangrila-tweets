@@ -23,11 +23,14 @@ Nossa projeto e baseado em uma estrutura de projeto multi-módulos
 
 
 # Desenho da Arquitetura da Solução
+Neste projeto foi utilizada a arquitetura baseada em microserviços utilizando os fundamentos dos serviços RestFul. Implementando esses recursos com vários recursos - controle de versão, tratamento de exceções, documentação (Swagger), autenticação básica (Spring Security), filtragem e HATEOAS. Procurando sem utilizar as melhores práticas na criação de serviços da Web RESTful.
+
+![Alt text](images/arquitetura_microservices.png)
 
 O desenho e implementação de uma arquitetura distribuída, que realize a integração com o Twitter que seja tolerante a falhas e escalável horizontalmente, que exponha através de uma aplicação web as informações sumarizadas e descritas no Case de integração.
 
 
-![Alt text](images/Arquitetura.png)
+![Arquitetura lambda](images/Arquitetura.png)
 
 
 ## Ferramentas Utilizadas
@@ -36,6 +39,9 @@ O desenho e implementação de uma arquitetura distribuída, que realize a integ
 * JVM 8
 * Docker machine
 * DevCenter
+* Eclipse & Embedded Maven
+- PostMan
+- Git Client - https://git-scm.com/
 * Registratar um aplicativo no Twtter.
 * Em seguida, processa em um fluxo usando Sparj Streaming: [Como criar uma aplicação no Twitter.](http://docs.inboundnow.com/guide/create-twitter-application/).
 
@@ -75,7 +81,7 @@ Neste quie rápido mostrarei como configurar sua máquina para executar nosso ap
 ~>  HADOOP_HOME = C:\Installations\Hadoop
 ```
 
-Agora inicie o shell do Windows; você pode receber alguns avisos, que você pode ignorar por enquanto.
+Agora inicie o shell do Windows você pode receber alguns avisos, que você pode ignorar por enquanto.
 
 ![Alt text](images/spark_install_sucess.png)
 
