@@ -18,6 +18,10 @@ import com.fasterxml.jackson.annotation.JsonFormat;
  */
 @Table("total_traffic")
 public class TotalTrafficData implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@PrimaryKeyColumn(name = "routeid",ordinal = 0,type = PrimaryKeyType.PARTITIONED)
 	private String routeId;
 	@PrimaryKeyColumn(name = "recordDate",ordinal = 1,type = PrimaryKeyType.CLUSTERED)

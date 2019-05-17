@@ -13,6 +13,10 @@ import com.fasterxml.jackson.annotation.JsonFormat;
  */
 public class IoTData implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String vehicleId;
 	private String vehicleType;
 	private String routeId;
