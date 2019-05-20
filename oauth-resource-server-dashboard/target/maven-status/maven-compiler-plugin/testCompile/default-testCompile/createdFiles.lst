@@ -1,0 +1,3 @@
+com\baeldung\test\JwtClaimsVerifierIntegrationTest.class
+com\baeldung\test\OAuth2SwaggerLiveTest.class
+com\baeldung\test\ResourceServerIntegrationTest.class

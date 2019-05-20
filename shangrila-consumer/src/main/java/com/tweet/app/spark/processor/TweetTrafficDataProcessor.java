@@ -51,7 +51,7 @@ public class TweetTrafficDataProcessor {
 
 		// We need to get count of vehicle group by routeId and vehicleType
 		JavaPairDStream<AggregateUser, Long> countDStreamPair = filteredIotDataStream
-				.mapToPair(iot -> new Tuple2<>(new AggregateUser(iot.getName(), iot.getMensagem(),iot.getIdioma()), 1L))
+				.mapToPair(iot -> new Tuple2<>(new AggregateUser(iot.getName(), iot.getIdioma()), 1L))
 				.reduceByKey((a, b) -> a + b);
 		
 		// Need to keep state for total count
@@ -205,11 +205,11 @@ public class TweetTrafficDataProcessor {
     
     //Function to create TotalTrafficData object from IoT data
     private static final Function<Tuple2<AggregateUser, Long>, TotalTweetsUsuarioTrafficData> totalTrafficDataFunc = (tuple -> {
-		logger.debug("Total Count : " + "Key " + tuple._1().getName() + "-" + tuple._1().getMensagem() + "-" + tuple._1().getIdioma()+ " value "+ tuple._2());
+		logger.debug("Total Count : " + "Key " + tuple._1().getName() + "-"  + tuple._1().getIdioma()+ " value "+ tuple._2());
 		TotalTweetsUsuarioTrafficData trafficData = new TotalTweetsUsuarioTrafficData();
 		trafficData.setName(tuple._1().getName());
-		trafficData.setMensagem(tuple._1.getMensagem());
 		trafficData.setIdioma(tuple._1.getIdioma());
+		trafficData.setMensagem("Mensagem Hoje");
 		trafficData.setTotalCount(tuple._2());
 		trafficData.setTimeStamp(new Date());
 		trafficData.setRecordDate(new SimpleDateFormat("yyyy-MM-dd").format(new Date()));

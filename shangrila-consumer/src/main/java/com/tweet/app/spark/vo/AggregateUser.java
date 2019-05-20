@@ -17,8 +17,6 @@ public class AggregateUser implements Serializable {
 
 	private String name;
 
-	private String mensagem;
-
 	private String idioma;
 
 	/**
@@ -26,10 +24,9 @@ public class AggregateUser implements Serializable {
 	 * @param mensagem
 	 * @param idioma
 	 */
-	public AggregateUser(String name, String mensagem, String idioma) {
+	public AggregateUser(String name, String idioma) {
 		super();
 		this.name = name;
-		this.mensagem = mensagem;
 		this.idioma = idioma;
 	}
 
@@ -40,12 +37,6 @@ public class AggregateUser implements Serializable {
 		return name;
 	}
 
-	/**
-	 * @return the mensagem
-	 */
-	public String getMensagem() {
-		return mensagem;
-	}
 
 	/**
 	 * @return the idioma
@@ -64,7 +55,6 @@ public class AggregateUser implements Serializable {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((idioma == null) ? 0 : idioma.hashCode());
-		result = prime * result + ((mensagem == null) ? 0 : mensagem.hashCode());
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		return result;
 	}
@@ -87,11 +77,6 @@ public class AggregateUser implements Serializable {
 			if (other.idioma != null)
 				return false;
 		} else if (!idioma.equals(other.idioma))
-			return false;
-		if (mensagem == null) {
-			if (other.mensagem != null)
-				return false;
-		} else if (!mensagem.equals(other.mensagem))
 			return false;
 		if (name == null) {
 			if (other.name != null)

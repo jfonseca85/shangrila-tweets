@@ -1,0 +1,50 @@
+<div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="text-center">Tweets Traffic Data Monitoring Dashboard</h2>
+            </div>
+        </div>
+        <br />
+        <div class="col-sm-4">
+          <div class="row">
+                <div class="col-sm-12">
+                        <h2 class="text-center">Usuarios com maiores seguidores</h2>
+                 </div>
+              <div *ngFor="let follwers of foo.totalTweetsFollwersTraffic">
+                <div class="col-sm-4">{{follwers.name}}</div>
+                <div class="col-sm-4">{{follwers.totalCount}}</div>
+                <div class="col-sm-4">{{follwers.timeStamp}}</div>
+              </div>
+          </div>
+       </div> 
+       <div class="col-sm-4">
+            <div class="col-sm-12">
+                    <h2 class="text-center">Total de Postagem/Usuario</h2>
+             </div>
+            <div class="row">
+                <div *ngFor="let follwers of foo.usuarioTrafficList">
+                  <div class="col-sm-4">{{follwers.name}}</div>
+                  <div class="col-sm-4">{{follwers.idioma}}</div>
+                  <div class="col-sm-4">{{follwers.totalCount}}</div>
+                </div>
+            </div>
+         </div> 
+
+         <div class="col-sm-4">
+                <div class="col-sm-12">
+                        <h2 class="text-center">Total de Postagem/Hora</h2>
+                 </div>
+                <div class="row">
+                    <div *ngFor="let follwers of foo.windowTweetTraffic">
+                      <div class="col-sm-4">{{follwers.routeId}}</div>
+                      <div class="col-sm-4">{{follwers.totalCount}}</div>
+                      <div class="col-sm-4">{{follwers.timeStamp}}</div>
+                    </div>
+                </div>
+        </div> 
+
+
+        <div class="col-sm-12">
+            <button class="btn btn-primary" (click)="getFoo()" type="submit">New Foo</button>
+        </div>
+    </div>

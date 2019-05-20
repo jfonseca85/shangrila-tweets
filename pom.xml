@@ -26,6 +26,6 @@
 		<module>shangrila-consumer</module>
 		<module>shangrila-dashboard</module>
 	</modules>
-	<!-- Here's the Build pipeline, Configuring it later under modules(shangrila-producer, 
+	<!-- Here's the Build pipeline, Configuring it later under modules(shangrila-producer,
 		shangrila-consumer, shangrila-dashboard) -->
 </project>
