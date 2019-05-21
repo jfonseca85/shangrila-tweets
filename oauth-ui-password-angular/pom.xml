@@ -5,7 +5,7 @@
 	<artifactId>oauth-ui-password-angular</artifactId>
 
 	<name>oauth-ui-password-angular</name>
-	<packaging>war</packaging>
+	<packaging>pom</packaging>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

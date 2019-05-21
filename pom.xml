@@ -24,7 +24,8 @@
 	<modules>
 		<module>shangrila-producer</module>
 		<module>shangrila-consumer</module>
-		<module>shangrila-dashboard</module>
+		<module>oauth-resource-server-dashboard</module>
+		<module>oauth-ui-password-angular</module>
 	</modules>
 	<!-- Here's the Build pipeline, Configuring it later under modules(shangrila-producer,
 		shangrila-consumer, shangrila-dashboard) -->

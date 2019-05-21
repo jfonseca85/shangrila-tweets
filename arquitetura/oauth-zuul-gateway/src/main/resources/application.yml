@@ -4,7 +4,7 @@ zuul:
   sensitiveHeaders: Cookie,Set-Cookie
   routes:
     spring-security-oauth-resource:
-      path: /resource/**
+      path: /tweets/**
       url: http://localhost:8082/spring-security-oauth-resource
     oauth:
       path: /oauth/**

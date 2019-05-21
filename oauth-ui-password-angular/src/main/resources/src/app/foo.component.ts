@@ -9,7 +9,7 @@ import {AppService, Foo} from './app.service'
 
 export class FooComponent {
     public foo = new Foo('1','sample foo',23,'sdfsfg');
-    private foosUrl = 'http://localhost:8085/resource/dashboards';  
+    private foosUrl = 'http://localhost:8085/tweets/api/v1/dashboards';
 
     constructor(private _service:AppService) {}
 

@@ -21,7 +21,7 @@ public class DashBoardController {
 
     // API - read
     @PreAuthorize("#oauth2.hasScope('foo') and #oauth2.hasScope('read')")
-    @RequestMapping(method = RequestMethod.GET, value = "/dashboards")
+    @RequestMapping(method = RequestMethod.GET, value = "api/v1/dashboards")
     @ResponseBody
     public Response listarDashBoard() {
         Response trigger = service.trigger();

@@ -41,7 +41,7 @@ public class TrafficDataService {
     private POITrafficDataRepository poiRepository;
 
     // Method sends traffic data message in every 5 seconds.
-    @Scheduled(fixedRate = 5000)
+   // @Scheduled(fixedRate = 5000)
     public Response trigger() {
         List<TotalTrafficData> totalTrafficList = new ArrayList<TotalTrafficData>();
         List<TotalTweetsFollwersTrafficData> totalTweetsFollwersTrafficList = new ArrayList<TotalTweetsFollwersTrafficData>();

@@ -77,18 +77,11 @@
 
 
 	<modules>
-		<module>oauth-resource-server-2</module>
-		<module>oauth-resource-server-1</module>
-
-		<module>clients-angularjs/oauth-ui-implicit</module>
-		<module>clients-angularjs/oauth-ui-password</module>
-        
-        <module>clients-thymeleaf/oauth-ui-authorization-code-thymeleaf</module>
-        <module>clients-SPA/clients-js-only-react</module>
-        <module>clients-SPA/oauth-resource-server-auth0</module>
-
+        <module>netflix-eureka-naming-server</module>
 		<module>oauth-authorization-server</module>
         <module>oauth-zuul-gateway</module>
+		<module>limits-service</module>
+		<module>spring-cloud-config-server</module>
 
 		<!-- commented out because these don't build on Jenkins -->
 		<!-- <module>clients-angular/oauth-ui-implicit-angular</module> <module>clients-angular/oauth-ui-password-angular</module> -->
